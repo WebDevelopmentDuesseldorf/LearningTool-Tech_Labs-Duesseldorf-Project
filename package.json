@@ -10,7 +10,9 @@
     "serve": "live-server public/",
     "build": "webpack --watch --progress",
     "build:prod": "webpack --optimization-minimize --mode production --env production",
-    "dev-server": "webpack serve"
+    "dev-server": "webpack serve",
+    "start": "node server/server.js",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
     "@babel/preset-env": "^7.14.7",
@@ -22,6 +24,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^5.2.6",
+    "express": "^4.17.1",
     "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^2.1.0",
     "node-sass": "^6.0.1",
