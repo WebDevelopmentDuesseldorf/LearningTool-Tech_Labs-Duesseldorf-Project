@@ -9,6 +9,7 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack --watch --progress",
+    "build:prod": "webpack --optimization-minimize --mode production --env production",
     "dev-server": "webpack serve"
   },
   "dependencies": {
