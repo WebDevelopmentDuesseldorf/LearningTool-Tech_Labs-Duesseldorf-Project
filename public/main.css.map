@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://learningtool/./src/styles/base/_base.scss"],"names":[],"mappings":"AAAA,EACE,qBAAsB","file":"main.css","sourcesContent":["* {\r\n  background-color: blue;\r\n}"],"sourceRoot":""}
