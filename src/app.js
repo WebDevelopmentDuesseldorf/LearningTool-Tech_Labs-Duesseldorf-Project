@@ -37,4 +37,4 @@ console.log(visibleTasks)
 
 
 
-ReactDOM.render(<Tasks />, document.getElementById('app'));
+ReactDOM.render(<AppRouter />, document.getElementById('app'));
