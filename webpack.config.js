@@ -6,7 +6,7 @@ module.exports = (env) => {
     const isProduction = env.production === true;
     console.log(isProduction)
     return {
-        entry: './src/app.js',
+        entry: './src/playground/app.js',
         mode: 'development',
         output: {
             path: path.join(__dirname, 'public'),
