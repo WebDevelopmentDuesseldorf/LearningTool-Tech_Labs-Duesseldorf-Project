@@ -8,13 +8,15 @@ export default function Signup(){
     const passwordConfirmRef = useRef()
     const { signup } = useAuth()
     const [error, setError] = useState('')
-    const [loading, setLoading] = usestate(false)
+    const [loading, setLoading] = useState(false)
 
    async function handleSubmit(e) {
         e.preventDefault()
 
         if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+            console.log("error")
             return setError('Passwords do not match')
+            
         }
 
 
