@@ -3,7 +3,7 @@ import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 
-export default function SignUp(){
+const SignUp = () => {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
@@ -12,7 +12,7 @@ export default function SignUp(){
     const [loading, setLoading] = useState(false)
     const history = useHistory()
 
-   async function handleSubmit(e) {
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
         if (passwordRef.current.value !== passwordConfirmRef.current.value) {
@@ -52,7 +52,7 @@ export default function SignUp(){
                         <Form.Label>Password Confirmation</Form.Label>
                         <Form.Control type="password" ref={passwordConfirmRef} required />
                     </Form.Group>
-                    <Button disabled={loading} style={{marginTop: "10px"}} className="w-100" type="submit">
+                    <Button disabled={loading} className="w-100 text-center mt-3" type="submit">
                     Sign Up
                     </Button>
                 </Form>
@@ -64,3 +64,5 @@ export default function SignUp(){
         </>
     )
 }
+
+export default SignUp
