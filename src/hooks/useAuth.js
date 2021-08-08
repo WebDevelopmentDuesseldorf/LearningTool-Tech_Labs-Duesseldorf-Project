@@ -22,7 +22,7 @@ export const useAuth = () => useContext(AuthContext)
 
 
 // Provider hook that creates auth object and handles state
-export const AuthPorvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [isAuthenticating, setIsAuthenticating] = useState(true)
 

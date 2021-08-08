@@ -36,7 +36,7 @@ const LogIn = () => {
                     </div>
 
 
-                    <Button disabled={!register.current.value} isLoading={formState.isSubmitting} className="w-100 text-center mt-3" type="submit">
+                    <Button isLoading={formState.isSubmitting} className="w-100 text-center mt-3" type="submit">
                     Log In
                     </Button>
                 </Form>
