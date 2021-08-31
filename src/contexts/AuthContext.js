@@ -30,7 +30,9 @@ export const AuthProvider = ({children}) => {
         setCurrentUser(user)
         })
 
-        return unsubscribe
+        return unsubscribe 
+        // eslint-disable-next-line
+
     }, [])
     
 
