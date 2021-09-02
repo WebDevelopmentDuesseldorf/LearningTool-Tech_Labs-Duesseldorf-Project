@@ -1,5 +1,6 @@
-Project in exercise phase. 
+# Workout Tracker app
 
-Netlify is now working with react-app-exercise branch:
-https://610dec8245f65d730e3f21be--dreamy-wiles-6c9f4e.netlify.app/
+Made with React and Firebase
 
+Deployed on AWS Amplify
+https://master.d3963aoi020v9l.amplifyapp.com/
