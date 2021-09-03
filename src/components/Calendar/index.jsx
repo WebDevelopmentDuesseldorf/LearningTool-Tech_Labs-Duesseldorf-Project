@@ -72,30 +72,35 @@ function Calendar(props) {
         let queryDate = `${selectedDay.day}-${selectedDay.month}-${selectedDay.year}`;
 
         let ref = firebase.db.ref().child(`users/${authUser.uid}/activities`);
+       
         ref.orderByChild("date").equalTo(queryDate).on("value", snapshot => {
             let data = snapshot.val();
             setActivities(data);
             setLoading(false);
             // setEditing(false); Add later
         });
-
+       
         // Update active days
         retrieveActiveDays();
     };
 
     const retrieveActiveDays = () => {
         let ref = firebase.db.ref().child(`users/${authUser.uid}/activities`);
+        
         ref.on("value", snapshot => {
             let data = snapshot.val();
-            const values = Object.values(data);
+            
+            const values = Object.values(data)
+            if (data !== 'not set') {
+                console.log(data)
             // Store all active day/month combinations in array for calendar
-            const arr = values.map(obj => {
-                return obj.date.length === 8
-                ? obj.date.slice(0,3)
-                : obj.date.slice(0,4)
+            console.log("values " + values)
+            const arr = values.map((obj) => {
+                return obj.date.length === 8 ? obj.date.slice(0,3) : obj.date.slice(0,4)
             });
             console.log(arr);
             setActiveDays(arr);
+        }
         });
     }
 
